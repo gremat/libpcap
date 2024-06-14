@@ -173,6 +173,10 @@ which is equivalent to:
 .in -.5i
 If \fIhostnameaddr\fR is a name with multiple IPv4/v6 addresses, each address will
 be checked for a match.
+.nf
+If \fIhostnameaddr\fR is a name that consists of exactly 12 hexadecimal characters,
+e.g., default hostnames of Docker containers, append '.' to the name to prevent it from
+being mistakenly recognized as an Ethernet MAC address.
 .IP "\fBether dst \fIethernameaddr\fP"
 True if the Ethernet destination address is \fIethernameaddr\fP.
 \fIethernameaddr\fP
